@@ -9,6 +9,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "babel-loader": "^8.2.2",
+    "core-js": "^3.15.2",
     "css-loader": "^5.2.6",
     "eslint": "^7.2.0",
     "eslint-config-airbnb-base": "^14.2.1",
@@ -25,7 +29,7 @@
     "sass-loader": "^12.1.0",
     "style-loader": "^3.0.0",
     "url-loader": "^4.1.1",
-    "webpack": "^5.42.0",
+    "webpack": "^5.45.1",
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.2"
   },
@@ -40,6 +44,14 @@
     ]
   },
   "eslintConfig": {
-    "extends":"airbnb-base"
+    "extends": "airbnb-base",
+    "env": {
+      "browser": true
+    },
+    "rules": {
+      "semi": ["error", "always"],
+      "quotes": ["error", "double"],
+      "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
+    }
   }
 }
