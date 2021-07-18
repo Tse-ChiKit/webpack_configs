@@ -1,7 +1,8 @@
 import '../css/index.css';
 import '../css/index.scss';
-
 import 'core-js/features';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 function test(a, b) {
   return a + b;
@@ -23,3 +24,8 @@ p.then((val) => {
 });
 
 fun1(12);
+
+ReactDOM.render(
+    <h1>Hello, world!</h1>,
+    document.getElementById('app'),
+);
